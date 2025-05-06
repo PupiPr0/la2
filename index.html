@@ -93,11 +93,19 @@
     const userLang = navigator.language || navigator.userLanguage; 
     let lang = 'en'; // По умолчанию английский
 
-    if (userLang.startsWith('ru')) {
+ /*   if (userLang.startsWith('ru')) {
         lang = 'ru';
     } else if (userLang.startsWith('pt')) {
         lang = 'pt';
     }
+*/
+    if (userLang.startsWith('ru')) {
+    lang = 'ru';
+} else if (userLang.startsWith('pt')) {
+    lang = 'pt';
+} else if (userLang.startsWith('ja')) {
+    lang = 'ja';
+}
 
     // Загружаем языковой пакет
     loadLanguage(lang);
