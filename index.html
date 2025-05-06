@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <title>Lineage 2 Gracia Final</title>
+</head>
+<body>
+
+<table width="1024" cellpadding="0" cellspacing="0" align="center" border="0">
+    <tr>
+        <td align="center" valign="top" height="290" border="0"></td>
+    </tr>
+    <tr>
+        <td height="400" border="0">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td>
+                        <table align="left" width="70%" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td class="content" align="justify" style="font-family: Arial, sans-serif; font-size: 16px; color: #333;">
+                                    <h2 id="greeting" style="text-align: center; color: #2c3e50;"></h2>
+                                    <p id="announcement"></p>
+                                    <p id="project_info"></p>
+                                    <p id="join_us" style="text-align: center; font-weight: bold;"></p>
+                                    <p style="text-align: center;">
+                                        <a id="join_telegram" href="#" target="_blank" style="display: inline-block; background-color: #007bff; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;"></a>
+                                    </p>
+                                    <p style="margin-top: 20px;">Ссылка на загрузку клиента и регистрацию появится ближе к дате открытия проекта.</p>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <table align="right" width="23%" height="500" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td class="right_menu" valign="top">
+                                    <h4 align="center" style="font-family: Monotype Corsiva; font-size: 20px;" id="countdown_message"></h4>
+                                    <table width="200" border="0" align="center">
+                                        <tr>
+                                            <td align="left">
+                                                Loginserver: Offline<br />
+                                                Gameserver: Offline<br />
+                                                Online: 0<br />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <br />
+                                    <table width="200" border="0" align="center">
+                                        <tr>
+                                            <td align="left">
+                                                <div id="countdown" style="font-size: 24px; font-weight: bold;"></div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom" align="center" border="0">
+            <div style="width: 1024px; height: 150px; background: url(img/footer.png);">
+                <div style="position: relative; bottom: -100px; font-family: Monotype Corsiva; font-size: 20px;" id="footer"></div>
+            </div>
+        </td>
+    </tr>
+</table>
+
+<script>
+    // Функция для загрузки языкового пакета
+    function loadLanguage(lang) {
+        fetch(`${lang}.json`)
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("greeting").innerHTML = data.greeting;
+                document.getElementById("announcement").innerHTML = data.announcement;
+                document.getElementById("project_info").innerHTML = data.project_info;
+                document.getElementById("join_us").innerHTML = data.join_us;
+                document.getElementById("join_telegram").innerHTML = data.join_telegram;
+                document.getElementById("join_telegram").href = "https://t.me/la2x1wmp";
+                               document.getElementById("countdown_message").innerHTML = data.countdown_message;
+                document.getElementById("footer").innerHTML = data.footer;
+            })
+            .catch(error => console.error('Error loading language file:', error));
+    }
+
+    // Определяем язык браузера
+    const userLang = navigator.language || navigator.userLanguage; 
+    let lang = 'en'; // По умолчанию английский
+
+    if (userLang.startsWith('ru')) {
+        lang = 'ru';
+    } else if (userLang.startsWith('pt')) {
+        lang = 'pt';
+    }
+
+    // Загружаем языковой пакет
+    loadLanguage(lang);
+
+    // Устанавливаем дату и время открытия сервера
+    const countDownDate = new Date("July 16, 2025 20:00:00 GMT+0300").getTime();
+
+    // Обновляем отсчет каждую секунду
+    const x = setInterval(function() {
+        const now = new Date().getTime();
+        const distance = countDownDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("countdown").innerHTML = days + "д " + hours + "ч " + minutes + "м " + seconds + "с ";
+
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("countdown").innerHTML = "Сервер открыт!";
+        }
+    }, 1000);
+</script>
+</body>
+</html>
+
