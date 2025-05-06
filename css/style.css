@@ -1,0 +1,80 @@
+body{
+  padding:0; margin:0 auto;
+  min-height:100%;
+  min-width: 1024px;
+  background: url(../img/shapka.png) no-repeat top center;
+  background-color: #fff;
+}
+
+a{
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover{
+  color: #000;
+  text-decoration: underline;
+}
+
+#top_menu{
+  font-family: Monotype Corsiva;
+  font-size: 19px;
+  color: #fff;
+  height: 45px;
+  background: url(../img/top_img.png);
+}
+
+#menu_link{
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+#top_menu a{
+  color:#ddd; 
+  font-size:19px; 
+  text-decoration:none; 
+  border-bottom:1px solid #555;
+}
+
+#top_menu a:hover{
+  color:#fff; 
+  border-bottom:1px solid #777;
+}
+
+.content{
+  font-family: arial;
+  font-size: 13px;
+}
+
+.right_menu{
+  font-family: Times New Roman;
+  font-width: 16px;
+  border-left-style: dashed;
+  border-left-width: 1px;
+}
+
+#l2top{
+  position: absolute;
+  top: 6px;
+  right: 30px;
+}
+
+
+/* Статистика по замкам */
+                     
+.date{
+                     font-size: 12px;
+                     font-family: arial;
+}                 
+
+.text{
+                     font-size: 12px;
+                     font-family: arial;
+}   
+
+.zag{
+                     font-size: 14px;
+                     font-family: arial;
+                     color: level;
+}   
+ 
