@@ -8,9 +8,9 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById('title').innerText = translations.title;
             document.getElementById('page-title').innerText = translations.title;
             document.getElementById('online-status').innerText = translations.online + "100"; // Пример
-            document.getElementById('server_status').innerText = translations.server_status;
+            document.getElementById('server-status').innerText = translations.server_status; // Исправлено на 'server-status'
             document.getElementById('rates').innerText = translations.rates;
-                        document.getElementById('download-btn').innerText = translations.download;
+            document.getElementById('download-btn').innerText = translations.download;
             document.getElementById('registration-btn').innerText = translations.registration;
             document.getElementById('registration-info').innerText = translations.registration_info;
 
@@ -55,4 +55,3 @@ document.addEventListener("DOMContentLoaded", function() {
         })
         .catch(error => console.error('Error loading localization:', error));
 });
-
