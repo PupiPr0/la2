@@ -1,3 +1,4 @@
+https://la2.wildmoney.pro/updater/WildSrvPack.zip
 https://github.com/LamaJg77/Joy/releases/download/v1/Animations.zip
 https://github.com/LamaJg77/Joy/releases/download/v1/ForceFeedback.zip
 https://github.com/LamaJg77/Joy/releases/download/v1/L2text.zip
