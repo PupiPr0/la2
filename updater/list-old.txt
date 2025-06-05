@@ -1,0 +1,12 @@
+https://la2.wildmoney.pro/updater/v2/LaucherWildApp.zip
+https://github.com/LamaJg77/Joy/releases/download/v1/Animations.zip
+https://github.com/LamaJg77/Joy/releases/download/v1/ForceFeedback.zip
+https://github.com/LamaJg77/Joy/releases/download/v1/L2text.zip
+https://github.com/LamaJg77/Joy/releases/download/v1/Maps.zip
+https://github.com/LamaJg77/Joy/releases/download/v1/music.zip
+https://github.com/LamaJg77/Joy/releases/download/v1/Sounds.zip
+https://github.com/LamaJg77/Joy/releases/download/v1/StaticMeshes.zip
+https://la2.wildmoney.pro/updater/system.zip
+https://github.com/LamaJg77/Joy/releases/download/v1/SysTextures.zip
+https://github.com/LamaJg77/Joy/releases/download/v1/Textures.zip
+https://github.com/LamaJg77/Joy/releases/download/v1/Voice.zip
