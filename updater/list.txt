@@ -9,3 +9,4 @@ https://github.com/L2GFx1/MyProject/releases/download/v4/System.zip
 https://github.com/L2GFx1/MyProject/releases/download/v4/SysTextures.zip
 https://github.com/LamaJg77/Joy/releases/download/v1/Textures.zip
 https://github.com/LamaJg77/Joy/releases/download/v1/Voice.zip
+https://github.com/L2GFx1/MyProject/releases/download/v5/Bonus.zip
